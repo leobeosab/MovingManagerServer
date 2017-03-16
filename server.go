@@ -6,5 +6,5 @@ import (
 
 func main() {
 	router := CreateRouter()
-	http.ListenAndServe(":80", router)
+	http.ListenAndServe(":8080", router)
 }

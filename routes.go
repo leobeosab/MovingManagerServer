@@ -1,12 +1,12 @@
 //Manages all the routes for the web server
-
 package main
 
 import "github.com/gorilla/mux"
 
-//Make a slice for the routes
+//Routes : Slice of routes for the server handler
 type Routes []Route
 
+//CreateRouter : Returns a Mux Router
 func CreateRouter() *mux.Router {
 	router := mux.NewRouter().StrictSlash(true)
 	for _, route := range routes {
@@ -33,7 +33,7 @@ var routes = Routes{
 	Route{
 		"Delete Move",
 		"DELETE",
-		"/moves/delete/{deleteId}",
+		"/moves/delete/{id}",
 		DeleteMove,
 	},
 }
