@@ -30,6 +30,9 @@ func Index(w http.ResponseWriter, r *http.Request) {
 
 //AddMove : Adds move to the MySQL database
 func AddMove(w http.ResponseWriter, r *http.Request) {
+
+	fmt.Println("Hah")
+
 	status := "success"
 
 	decoder := json.NewDecoder(r.Body)
