@@ -12,7 +12,8 @@ import (
 
 //Index : Used to return a list of Moves
 func Index(w http.ResponseWriter, r *http.Request) {
-	moves := ListMoves()
+
+	moves := MoveResponse{Moves: *ListMoves()}
 
 	marshalled, err := json.Marshal(&moves)
 	if err != nil {

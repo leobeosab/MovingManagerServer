@@ -24,3 +24,8 @@ type Move struct {
 	FamilyName         string `json:"family_name"`
 	PreviewImageURL    string `json:"preview_image_url"`
 }
+
+//MoveResponse : Returned so the list of moves has a title
+type MoveResponse struct {
+	Moves []Move `json:"moves"`
+}
